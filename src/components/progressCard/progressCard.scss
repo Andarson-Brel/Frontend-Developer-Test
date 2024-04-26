@@ -1,0 +1,109 @@
+@import "../../responsive.scss";
+@import "../../variables";
+.container {
+  position: relative;
+  .floating-value {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    background-color: $primary-color;
+    color: $secondary-color;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .card {
+    width: 100%;
+    // height: 250px;
+    // background-color: #424242;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .percentage {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      .number {
+        inset: 0;
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        font-size: 26px;
+        font-weight: 700;
+        margin: auto;
+        color: $primary-color;
+        width: 70%;
+        height: 70%;
+        background-color: $secondary-color;
+        border-radius: 50%;
+        box-shadow: 0 6px 0 #f5f5fc;
+      }
+      .dot {
+        position: absolute;
+        // background-color: red;
+        // bottom: 0;
+        inset: 5px;
+        z-index: 10;
+        transform: rotate(calc(3.6deg * var(--value)));
+        animation: animatedDot 1s linear forwards;
+        @keyframes animatedDot {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(calc(3.6deg * var(--value)));
+          }
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          height: 10px;
+          width: 10px;
+          left: 50%;
+          top: -5px;
+          border-radius: 50%;
+          box-shadow: 0 0 10px $primary-color, 0 0 30px $primary-color;
+          transform: translateX(-50%);
+          background-color: $primary-color;
+        }
+      }
+      svg {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        transform: rotate(270deg);
+
+        circle {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          fill: transparent;
+          stroke-width: 3;
+          transform: translate(5px, 5px);
+          stroke: $secondary-color;
+          fill: $secondary-color;
+          &:nth-child(2) {
+            stroke: $primary-color;
+            stroke-dashoffset: calc((440 - (440 * var(--value)) / 100));
+            z-index: -1;
+            stroke-dasharray: 440;
+            animation: animateLine 1s linear forwards;
+            animation-delay: 1s;
+            opacity: 0;
+            @keyframes animateLine {
+              0% {
+                opacity: 0;
+              }
+              100% {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

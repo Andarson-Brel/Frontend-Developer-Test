@@ -1,0 +1,17 @@
+@import "../../responsive.scss";
+.notificationPage {
+  height: 100%;
+  overflow-y: scroll;
+  padding: 40px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  &::-webkit-scrollbar {
+    display: none; /* WebKit */
+  }
+  @include sm {
+    padding: 20px;
+  }
+  .section-title {
+    margin-bottom: 1rem;
+  }
+}

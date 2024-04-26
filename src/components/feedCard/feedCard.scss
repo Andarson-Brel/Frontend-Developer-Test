@@ -1,0 +1,50 @@
+@import "../../responsive.scss";
+.feedCard {
+  // max-width: 50%;
+  width: 50%;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 17px 2px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0px 0px 17px 2px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 0px 17px 2px rgba(0, 0, 0, 0.24);
+  margin-bottom: 1rem;
+  @include md {
+    width: 100%;
+  }
+  .profile-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+    img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+    .userNameAndPosition {
+      display: flex;
+      gap: 6px;
+      flex-direction: column;
+      h3 {
+        font-size: 16px;
+      }
+      p {
+        color: #c4bdd5;
+        // font-size: 12px;
+      }
+    }
+  }
+  .description {
+    color: #000013;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+  .insight-container,
+  .details {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

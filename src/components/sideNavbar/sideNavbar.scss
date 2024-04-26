@@ -1,0 +1,46 @@
+@import "../../responsive.scss";
+@import "../../variables";
+.side-navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding-top: 50px;
+  @include md {
+    display: none;
+  }
+  .logo-cont {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 34px;
+      margin: 0 auto;
+    }
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    a {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      position: relative;
+      .nav-link {
+        //   font-size: 24px;
+        &.active {
+          color: $red-color;
+          position: relative;
+          left: 30px;
+          padding: 20px;
+          background-color: $secondary-color;
+          border-radius: 10px;
+          box-shadow: 10px 10px 7px -6px rgba(0, 0, 0, 0.2);
+          -webkit-box-shadow: 10px 10px 7px -6px rgba(0, 0, 0, 0.2);
+          -moz-box-shadow: 10px 10px 7px -6px rgba(0, 0, 0, 0.2);
+          transition: all 1s ease;
+        }
+      }
+    }
+  }
+}

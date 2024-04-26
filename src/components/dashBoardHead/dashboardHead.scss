@@ -1,0 +1,59 @@
+@import "../../responsive.scss";
+@import "../../variables";
+.dashboardHead {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  .logo {
+    width: 30px;
+    display: none;
+    @include md {
+      display: inline;
+    }
+  }
+  .searchbarAndLInk {
+    flex: 1;
+    gap: 20px;
+    display: flex;
+    @include md {
+      display: none;
+    }
+    .searchContainer {
+      background-color: $bg-color;
+      height: 50px;
+      width: 50%;
+      border-radius: 10px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      padding: 0 10px;
+      input {
+        background-color: transparent;
+        height: 100%;
+        width: 100%;
+        border: none;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .headerLink {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+    }
+  }
+  .profileLink {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+      border-radius: 5px;
+    }
+  }
+}

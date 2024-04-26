@@ -1,0 +1,40 @@
+@import "../../responsive.scss";
+@import "../../variables";
+
+.layout {
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+
+  background: $primary-color;
+  display: flex;
+  .side-navbar-container {
+    width: 80px;
+
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    @include md {
+      display: none;
+    }
+  }
+  @include md {
+  }
+  @include sm {
+  }
+  main {
+    width: calc(100% - 80px);
+    height: 100vh;
+    // overflow-y: scroll;
+    background-color: $secondary-color;
+    border-radius: 40px 0 0 40px;
+    padding: 40px 0;
+    @include md {
+      width: 100%;
+      border-radius: 0;
+      background-color: #f7f8ff;
+      padding-bottom: 110px;
+    }
+  }
+}

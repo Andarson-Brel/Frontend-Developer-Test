@@ -1,0 +1,25 @@
+@import "../../responsive.scss";
+.chartPage {
+  height: 100%;
+  overflow-y: scroll;
+  padding: 40px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  &::-webkit-scrollbar {
+    display: none; /* WebKit */
+  }
+  @include sm {
+    padding: 20px;
+  }
+  .data-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    width: 100%;
+    gap: 20px;
+    @include xsm {
+      gap: 10px;
+    }
+  }
+}

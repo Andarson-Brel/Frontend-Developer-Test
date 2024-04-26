@@ -1,0 +1,8 @@
+@import "../../responsive.scss";
+.lineChart {
+  width: 50%;
+  margin-bottom: 1rem;
+  @include md {
+    width: 100%;
+  }
+}

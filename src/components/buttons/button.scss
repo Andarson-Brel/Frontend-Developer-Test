@@ -1,0 +1,14 @@
+@import "../../responsive.scss";
+@import "../../variables";
+.primary-btn {
+  padding: 0.8rem 2rem;
+  background-color: $primary-color;
+  color: $secondary-color;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  .arrow-right {
+    margin-left: 10px;
+  }
+}

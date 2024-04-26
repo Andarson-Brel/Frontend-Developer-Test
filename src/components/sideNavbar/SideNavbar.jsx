@@ -2,12 +2,9 @@ import React, { useState } from "react";
 import "./sideNavbar.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faChartArea,
   faChartPie,
-  faChartSimple,
   faHouse,
   faMessage,
-  faPieChart,
   faWallet,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";

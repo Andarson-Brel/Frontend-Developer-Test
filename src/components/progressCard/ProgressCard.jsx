@@ -17,7 +17,7 @@ const ProgressCard = () => {
       }
     }, 10);
     return () => clearInterval(interval);
-  }, [value]);
+  }, [value, displayedValue]);
 
   return (
     <div className="container">

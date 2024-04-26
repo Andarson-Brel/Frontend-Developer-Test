@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./layout.scss";
 
 import SideNavbar from "../../components/sideNavbar/SideNavbar";

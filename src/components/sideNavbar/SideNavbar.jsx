@@ -7,9 +7,12 @@ import {
   faMessage,
   faWallet,
 } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 const SideNavbar = () => {
-  const [active, setActive] = useState("home");
+  const location = useLocation();
+  const pathName = location.pathname;
+
+  const [active, setActive] = useState(pathName);
 
   const handleClick = (page) => {
     setActive(page);
@@ -18,37 +21,38 @@ const SideNavbar = () => {
     <div className="side-navbar">
       <div className="logo-cont">
         <img src="images/logo-colored-bg.svg" alt="logo" />
-        {/* <img src="images/logo-white-bg.svg" alt="logo" /> */}
       </div>
       <ul>
-        <Link to={"/"} onClick={() => handleClick("home")}>
+        <Link to={"/"} onClick={() => handleClick("/dashboard")}>
           <FontAwesomeIcon
             icon={faHouse}
             color={"#8880CF"}
             size="1.5x"
-            className={`nav-link ${active === "home" ? "active" : ""}`}
+            className={`nav-link ${
+              active === "/dashboard" || active === "/" ? "active" : ""
+            }`}
           />
         </Link>
-        <Link to={"/chart"} onClick={() => handleClick("chart")}>
+        <Link to={"/chart"} onClick={() => handleClick("/chart")}>
           <FontAwesomeIcon
             icon={faChartPie}
             color={"#8880CF"}
-            className={`nav-link ${active === "chart" ? "active" : ""}`}
+            className={`nav-link ${active === "/chart" ? "active" : ""}`}
           />
         </Link>
 
-        <Link to={"/notification"} onClick={() => handleClick("notification")}>
+        <Link to={"/notification"} onClick={() => handleClick("/notification")}>
           <FontAwesomeIcon
             icon={faMessage}
             color={"#8880CF"}
-            className={`nav-link ${active === "notification" ? "active" : ""}`}
+            className={`nav-link ${active === "/notification" ? "active" : ""}`}
           />
         </Link>
-        <Link to={"/wallet"} onClick={() => handleClick("wallet")}>
+        <Link to={"/wallet"} onClick={() => handleClick("/wallet")}>
           <FontAwesomeIcon
             icon={faWallet}
             color={"#8880CF"}
-            className={`nav-link ${active === "wallet" ? "active" : ""}`}
+            className={`nav-link ${active === "/wallet" ? "active" : ""}`}
           />
         </Link>
       </ul>

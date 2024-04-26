@@ -79,7 +79,7 @@ const DashBoard = () => {
           <VirtualCard />
           <div className="section-title">
             <h3>Transaction</h3>
-            <img src="./images/plus-fill.svg" alt="" />
+            <img src="./images/plus-fill.svg" alt="" loading="lazy" />
           </div>
           <div className="transactionHistory-list">
             <TransactionHistoryListItem

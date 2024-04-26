@@ -20,7 +20,7 @@ const SideNavbar = () => {
   return (
     <div className="side-navbar">
       <div className="logo-cont">
-        <img src="images/logo-colored-bg.svg" alt="logo" />
+        <img src="images/logo-colored-bg.svg" alt="logo" loading="lazy" />
       </div>
       <ul>
         <Link to={"/"} onClick={() => handleClick("/dashboard")}>

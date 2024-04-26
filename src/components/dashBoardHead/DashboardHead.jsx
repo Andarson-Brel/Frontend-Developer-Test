@@ -6,7 +6,12 @@ import { Link } from "react-router-dom";
 const DashboardHead = () => {
   return (
     <div className="dashboardHead">
-      <img src="./images/logo-white-bg.svg" alt="logo" className="logo" />
+      <img
+        src="./images/logo-white-bg.svg"
+        alt="logo"
+        className="logo"
+        loading="lazy"
+      />
       <div className="searchbarAndLInk">
         <div className="searchContainer">
           <FontAwesomeIcon icon={faSearch} color={"#8880CF"} />
@@ -23,7 +28,7 @@ const DashboardHead = () => {
           <FontAwesomeIcon icon={faBell} color={"#8880CF"} />
         </Link>
         <div className="profile-icon-cont">
-          <img src="/images/avatar.jpg" alt="avatar" />
+          <img src="/images/avatar.jpg" alt="avatar" loading="lazy" />
         </div>
       </div>
     </div>

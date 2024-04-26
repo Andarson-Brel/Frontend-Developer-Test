@@ -5,7 +5,7 @@ const TransactionHistoryListItem = ({ img, transaction, date, amount }) => {
     <div className="transactionLst">
       <div className="iconAndDate">
         <div className="icon-cont">
-          <img src={img} alt="" />
+          <img src={img} alt="" loading="lazy" />
         </div>
         <div className="transactionAnddate">
           <h4 className="title">{transaction}</h4>
